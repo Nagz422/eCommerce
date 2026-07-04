@@ -28,6 +28,6 @@ public class ShippingAddress {
     
     @ManyToOne
     @JoinColumn(name="customerId")
-    private int customerId;
+    private Customer customerId;
     
 }
