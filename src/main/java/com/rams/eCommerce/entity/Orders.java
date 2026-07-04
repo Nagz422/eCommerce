@@ -16,30 +16,39 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name="products")
+@Table(name="Orders")
 @Setter
 @Getter
-public class Product {
+public class Orders {
 	
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
-	private int productId;
+	private int orderId;
 	
-	private String productName;
-	private String productDescription;
-	private String productTitle;
-	private int productPrice;
-	private String ptoductImageURL;
-	private String active;
-	private int unitsStock;
+	private Long orderTrackingId;
+	private int totalQuantity;
+	private double totalPrice;
+	private String orderStatus;
 	
 	@CreationTimestamp
-	private LocalDate createdDate;
+	private LocalDate cretedDate;
 	
 	@UpdateTimestamp
 	private LocalDate updatedDate;
 	
+	@UpdateTimestamp
+	private LocalDate deliveredDate;
+	
+	private String paymentStatus;
+	
+	private Long razorpayOrderId;
+	private Long razorpayPaymentId;
+
 	@ManyToOne
-	@JoinColumn(name="categoryId")
-	private String productCategoryId;
+	@JoinColumn(name="customerId")
+	private int customerId;
+	
+	@ManyToOne
+	@JoinColumn(name="shippingId")
+	private String addrId;
 }
