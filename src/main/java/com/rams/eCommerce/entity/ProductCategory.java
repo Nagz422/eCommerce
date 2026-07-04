@@ -19,5 +19,4 @@ public class ProductCategory {
 	private int categoryId;
 	private String categoryName;
 	
-	//Just merge approval test
 }
