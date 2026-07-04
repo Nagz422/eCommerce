@@ -18,4 +18,6 @@ public class ProductCategory {
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private int categoryId;
 	private String categoryName;
+	
+	//Just merge approval test
 }
