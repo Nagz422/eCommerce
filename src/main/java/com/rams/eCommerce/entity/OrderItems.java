@@ -27,9 +27,9 @@ public class OrderItems {
 
 	@OneToMany
 	@JoinColumn(name="productId")
-	private int productId;
+	private Product productId;
 	
 	@OneToOne
 	@JoinColumn(name="orderId")
-	private int orderId;
+	private Orders orderId;
 }

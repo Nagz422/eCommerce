@@ -46,9 +46,9 @@ public class Orders {
 
 	@ManyToOne
 	@JoinColumn(name="customerId")
-	private int customerId;
+	private Customer customerId;
 	
 	@ManyToOne
 	@JoinColumn(name="shippingId")
-	private String addrId;
+	private ShippingAddress addrId;
 }
